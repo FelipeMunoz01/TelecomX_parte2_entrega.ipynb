@@ -7,16 +7,21 @@ En este repositorio se encuentra el Challenge Telecom X: análisis de evasión d
 #----------------
 
 TELECOM X - PREDICCIÓN DE CANCELACIÓN (Churn)
+
 📊 Introducción
+
 Este proyecto se enfoca en el análisis y predicción de la cancelación de clientes (churn) en una empresa de telecomunicaciones. Utilizando datos históricos, se busca identificar los factores clave que influyen en la decisión de un cliente de cancelar su servicio y desarrollar modelos predictivos para anticipar este comportamiento.
 
 📌 Extracción y Preparación de Datos
+
 Los datos fueron cargados desde un archivo CSV (df_limpo.csv). Se realizó un preprocesamiento exhaustivo que incluyó:
 
 Eliminación de columnas irrelevantes (customerID).
 Agrupación de categorías en variables categóricas (ej: "No internet service" como "No").
 Aplicación de One-Hot Encoding para convertir variables categóricas en numéricas.
 Manejo de valores nulos en las columnas Total.Day y account.Charges.Total mediante la eliminación de las filas correspondientes.
+
+
 🛠️ Análisis Exploratorio de Datos y Multicolinealidad
 Se realizó un análisis de correlación para entender las relaciones entre las variables y la variable objetivo (Churn_Yes). Se visualizó un heatmap de correlación, filtrando por variables con una correlación absoluta mayor o igual a 0.2 con la variable objetivo.
 
@@ -44,6 +49,8 @@ Servicio de Internet (internet.InternetService_Fiber optic, internet.InternetSer
 Tipo de Contrato (account.Contract_Two year, account.Contract_One year): Contratos a largo plazo reducen el churn.
 Método de Pago (account.PaymentMethod_Electronic check): El pago con cheque electrónico se asocia con mayor churn.
 Servicios Adicionales: La falta de servicios como soporte técnico, seguridad en línea, copia de seguridad y protección de dispositivos aumenta el riesgo de churn.
+
+
 💡 Estrategias de Retención Propuestas
 Basado en los hallazgos, se proponen las siguientes estrategias para reducir la cancelación:
 
@@ -53,6 +60,8 @@ Investigar y mejorar la experiencia de los clientes con servicio de fibra óptic
 Incentivar la adopción de contratos a largo plazo.
 Analizar y optimizar el proceso de pago con cheque electrónico, fomentando métodos de pago más estables.
 Promover y educar sobre los beneficios de los servicios de valor agregado.
+
+
 ⏭️ Próximos Pasos
 Optimización de hiperparámetros y validación cruzada para mejorar el rendimiento del modelo.
 Análisis más profundo de los factores influyentes específicos.
